@@ -25,6 +25,9 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Ensure Tailwind Oxide binary
+        run: npm install @tailwindcss/oxide-linux-x64-gnu
+
       - name: Rebuild Tailwind Oxide
         run: npm rebuild @tailwindcss/oxide
 
