@@ -16,6 +16,7 @@
     "axios": "^1.9.0",
     "crypto-js": "^4.2.0",
     "jsonwebtoken": "^9.0.2",
+    "lightningcss": "^1.30.2",
     "lodash": "^4.17.21",
     "next": "15.2.5",
     "react": "^19.0.0",
