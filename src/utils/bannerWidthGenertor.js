@@ -605,7 +605,7 @@ export function bannerWidthGenertor(data) {
       estimatedWidth:
         estimateWidth(item.heading, fontSize) +
         imageSizes[fontSize] +
-        (item.heading?.length > 11
+        (item.heading.length > 11
           ? widthAdjustments[fontSize][1]
           : widthAdjustments[fontSize][0]),
     }));

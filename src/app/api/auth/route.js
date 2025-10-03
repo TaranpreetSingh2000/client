@@ -8,11 +8,11 @@ function generateAccessToken(payload) {
   });
 }
 
-// function generateRefreshToken(payload) {
-//   return jwt.sign(payload, process.env.REFRESH_SECRET, {
-//     expiresIn: "7h",
-//   });
-// }
+function generateRefreshToken(payload) {
+  return jwt.sign(payload, process.env.REFRESH_SECRET, {
+    expiresIn: "7h",
+  });
+}
 
 export async function GET() {
   const sessionId = crypto.randomUUID();
@@ -20,13 +20,13 @@ export async function GET() {
     sessionId,
   };
   const accessToken = generateAccessToken(payload);
-  // const refreshToken = generateRefreshToken(payload);
+  const refreshToken = generateRefreshToken(payload);
   const cookieStore = await cookies();
-  // cookieStore.set("refreshToken", refreshToken, {
-  //   secure: false,
-  //   httpOnly: true,
-  //   sameSite: "Strict",
-  // });
+  cookieStore.set("refreshToken", refreshToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: "Strict",
+  });
 
   const encryptedToken = encryptData(accessToken);
   return Response.json({

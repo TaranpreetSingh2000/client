@@ -77,7 +77,7 @@ const OurExpertModal = ({ setIsModalOpen }) => {
 
   const handleInputOnBlur = (e) => {
     if (e.target.name == "name") {
-      if (e.target.value.trim()?.length < 2) {
+      if (e.target.value.trim().length < 2) {
         setNameError(
           "Please enter a valid Full Name (2-30 characters, letters and spaces only)",
         );
@@ -92,8 +92,8 @@ const OurExpertModal = ({ setIsModalOpen }) => {
       }
     } else if (e.target.name == "question") {
       if (
-        e.target.value.trim()?.length < 5 ||
-        e.target.value.trim()?.length >= 500
+        e.target.value.trim().length < 5 ||
+        e.target.value.trim().length >= 500
       ) {
         setTextAreaError(
           "Please enter a valid question (5–500 characters, letters and spaces only).",
@@ -119,7 +119,7 @@ const OurExpertModal = ({ setIsModalOpen }) => {
 
     if (name === "name") {
       // Clear name error if valid
-      if (onchangeFieldChecker.trim()?.length >= 2) {
+      if (onchangeFieldChecker.trim().length >= 2) {
         setNameError("");
       }
     } else if (name === "email") {
@@ -132,8 +132,8 @@ const OurExpertModal = ({ setIsModalOpen }) => {
       }
     } else if (name === "question") {
       if (
-        onchangeFieldChecker.trim()?.length >= 5 &&
-        onchangeFieldChecker.trim()?.length <= 500
+        onchangeFieldChecker.trim().length >= 5 &&
+        onchangeFieldChecker.trim().length <= 500
       ) {
         setTextAreaError("");
       }
@@ -141,7 +141,7 @@ const OurExpertModal = ({ setIsModalOpen }) => {
   };
 
   const validateForm = () => {
-    if (formData.name.trim()?.length < 2) {
+    if (formData.name.trim().length < 2) {
       setNameError(
         "Please enter a valid Full Name (2-30 characters, letters and spaces only)",
       );
@@ -155,7 +155,7 @@ const OurExpertModal = ({ setIsModalOpen }) => {
       setPhoneError("Please enter a valid 10-digit mobile number");
       return false;
     }
-    if (formData.question.trim()?.length < 5) {
+    if (formData.question.trim().length < 5) {
       setTextAreaError(
         "Please enter a valid question (5–500 characters, letters and spaces only)",
       );

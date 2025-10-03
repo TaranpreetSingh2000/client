@@ -73,7 +73,7 @@ const CompleteProfile = ({
   ].filter((step) => step.visible);
 
   const totalSteps = profileSteps?.length;
-  const completedCount = profileSteps.filter((step) => step.completed)?.length;
+  const completedCount = profileSteps.filter((step) => step.completed).length;
   const percentage = Math.round((completedCount / totalSteps) * 100);
 
   return (

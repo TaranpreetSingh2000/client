@@ -24,7 +24,7 @@ const useFetch = () => {
       );
 
       const decryptedData = decryptData(data?.data);
-      setProfileData(decryptedData?.length > 0 ? decryptedData[0] : []);
+      setProfileData(decryptedData.length > 0 ? decryptedData[0] : []);
     } catch (error) {
       console.error("Failed to fetch profile:", error);
     }

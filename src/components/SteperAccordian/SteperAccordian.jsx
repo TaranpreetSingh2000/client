@@ -42,7 +42,7 @@ export default function SteperAccordian({ userModulesPageData }) {
     let completed = 0;
     checkedState.forEach((module, idx) => {
       total += stepperAccordionData[idx]?.lessons?.length;
-      completed += module.filter((c) => c === true)?.length;
+      completed += module.filter((c) => c === true).length;
     });
     return total ? completed / total : 0;
   };

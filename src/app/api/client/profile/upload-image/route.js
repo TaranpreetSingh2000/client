@@ -19,7 +19,7 @@ export async function POST(request) {
     }
 
     const buffer = Buffer.from(imageBase64, "base64");
-    if (buffer?.length > 2 * 1024 * 1024) {
+    if (buffer.length > 2 * 1024 * 1024) {
       const encryptedErrorData = encryptData({
         error: { message: "File size should be less than 2MB" },
       });

@@ -23,7 +23,7 @@ const Header = ({ headerData }) => {
       document.getElementById(item.url?.replace("#", "")),
     ).filter((el) => el !== null);
 
-    if (!sectionElements?.length) return;
+    if (!sectionElements.length) return;
 
     const handleIntersect = (entries) => {
       let found = false;
