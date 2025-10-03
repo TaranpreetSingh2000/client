@@ -61,7 +61,7 @@ const OtpSection = ({
     const sanitizedValue = value.replace(/[^0-9]/g, "");
     inputs[index].current.value = sanitizedValue;
 
-    if (sanitizedValue && index < inputs?.length - 1) {
+    if (sanitizedValue && index < inputs.length - 1) {
       focusInput(inputs, index + 1);
     }
     setInputWatcher((prev) => prev + 1);
@@ -79,7 +79,7 @@ const OtpSection = ({
     // On pressing the Arrow keys, focus will move on the left and right side
     if (e.key === "ArrowLeft" && index > 0) {
       focusInput(inputs, index - 1);
-    } else if (e.key === "ArrowRight" && index < inputs?.length - 1) {
+    } else if (e.key === "ArrowRight" && index < inputs.length - 1) {
       focusInput(inputs, index + 1);
     }
 

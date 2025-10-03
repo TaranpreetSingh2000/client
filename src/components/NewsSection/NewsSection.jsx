@@ -88,13 +88,13 @@ function NewsSection({ newsSectionData }) {
               className="w-full h-full object-cover rounded-2xl"
             />
 
-            {category && category?.length > 1 ? (
+            {category && category.length > 1 ? (
               <CategoryTag categoryTag={category} />
             ) : (
               ""
             )}
           </div>
-        ) : category && category?.length > 1 ? (
+        ) : category && category.length > 1 ? (
           <CategoryTag categoryTag={category} />
         ) : (
           ""

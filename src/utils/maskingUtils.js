@@ -4,7 +4,7 @@ function maskPhoneNumber(phoneNumber) {
 
   const firstTwo = phoneNumber.slice(0, 2);
   const lastTwo = phoneNumber.slice(-2);
-  const maskedMiddle = "*".repeat(phoneNumber?.length - 4);
+  const maskedMiddle = "*".repeat(phoneNumber.length - 4);
 
   return firstTwo + maskedMiddle + lastTwo;
 }
@@ -13,12 +13,12 @@ function maskEmail(email) {
   if (typeof email !== "string" || !email.includes("@")) return email ?? "";
 
   const [localPart, domain] = email.split("@");
-  if (localPart?.length <= 3) {
+  if (localPart.length <= 3) {
     return `${localPart}@${domain}`;
   }
 
   const visiblePart = localPart.slice(0, 3);
-  const maskedPart = "*".repeat(localPart?.length - 3);
+  const maskedPart = "*".repeat(localPart.length - 3);
 
   return `${visiblePart}${maskedPart}@${domain}`;
 }

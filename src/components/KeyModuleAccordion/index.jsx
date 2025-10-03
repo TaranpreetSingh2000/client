@@ -77,7 +77,7 @@ const MobileView = ({ modules, openModule, toggleModule }) => {
                 {_map(module?.modulesList, (lesson, i) => (
                   <li
                     key={i}
-                    className={`py-3 px-4 ${i < module?.modulesList?.length - 1 ? "border-b border-gray-200" : ""} text-gray-700 text-xs text-left`}
+                    className={`py-3 px-4 ${i < module?.modulesList.length - 1 ? "border-b border-gray-200" : ""} text-gray-700 text-xs text-left`}
                   >
                     <Link
                       onClick={(e) => {

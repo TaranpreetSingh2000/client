@@ -11,7 +11,7 @@ const TestimonialCarousel = ({ successStoryCardData }) => {
   const swiperRef = useRef(null);
 
   const totalLength = successStoryCardData?.reduce(
-    (sum, obj) => sum + obj.sucessStoryInnerCardSection?.length,
+    (sum, obj) => sum + obj.sucessStoryInnerCardSection.length,
     0,
   );
   const totalCardsArr = Array.from({ length: totalLength }, (_, i) => i);

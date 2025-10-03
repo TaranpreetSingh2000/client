@@ -93,7 +93,7 @@ const HeroBanner = ({
       );
       const newOrder = widths?.length > 0 && [...widths, widths[0]];
 
-      if (newOrder?.length > 1) {
+      if (newOrder.length > 1) {
         setOrder(newOrder);
         if (intervalRef?.current) clearInterval(intervalRef?.current);
         setResetKey(Date?.now());

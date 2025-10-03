@@ -41,7 +41,7 @@ const bannerKeyframeGenertor = (data) => {
     ${_map(items, (_, i) => {
       let keyframe = `@keyframes item${i} {`;
       const p = itemDurationPercent;
-      const n = items?.length;
+      const n = items.length;
       const t = 1200 / n / (totalDuration * 10);
       if (i === 0) {
         keyframe += `
