@@ -25,6 +25,9 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Rebuild Tailwind Oxide
+        run: npm rebuild @tailwindcss/oxide
+
       - name: Running test cases
         run: npm run test --if-present
 
